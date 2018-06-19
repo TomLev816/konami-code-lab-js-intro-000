@@ -18,7 +18,7 @@ function init() {
     const key = e.key
     index = (codes[index] === key) ? ++index : 0
 
-    if (idx === codes.length) {
+    if (index === codes.length) {
       window.alert('Hurray');
       index = 0
     }
