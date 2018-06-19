@@ -12,19 +12,15 @@ const codes = [
 ];
 
 function init() {
-  const alphabet = ['a', 'b', 'c'];
-  let index = 0;
-  function onKeyDownHandler(e) {
-    const key = e.key;
-    if (key === alphabet[index]) {
-      index++;
-      if (index === alphabet.length){
-        alert("Hurray!");
-        index = 0;
+  let index = 0
 
-      }
-    }  else {
-      index = 0;
+  document.body.addEventListener('keydown', (e) => {
+    const key = e.key
+    index = (codes[index] === key) ? ++index : 0
+
+    if (idx === codes.length) {
+      window.alert('Hurray');
+      index = 0
     }
+  });
   }
-    
